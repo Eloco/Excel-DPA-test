@@ -38,10 +38,10 @@
                   <bt:Image size="32" resid="Icon.32x32"/>
                   <bt:Image size="80" resid="Icon.80x80"/>
                 </Icon>
-                <Control xsi:type="Button" id="CEIC-DPATaskpaneButton">
-                  <Label resid="TaskpaneButton.Label"/>
+                <Control xsi:type="Button" id="CEIC-DPATaskpaneButton1">
+                  <Label resid="TaskpaneButton1.Label"/>
                   <Supertip>
-                    <Title resid="TaskpaneButton.Label"/>
+                    <Title resid="TaskpaneButton1.Label"/>
                     <Description resid="TaskpaneButton.Tooltip"/>
                   </Supertip>
                   <Icon>
@@ -52,13 +52,13 @@
                   <Action xsi:type="ShowTaskpane">
                     <TaskpaneId>ButtonId1</TaskpaneId>
                     <SourceLocation resid="Taskpane.Url"/>
-                    <Title resid="TaskpaneButton.Label"/>
+                    <Title resid="TaskpaneButton1.Label"/>
                   </Action>
                 </Control>
                 <Control xsi:type="Button" id="CEIC-DPATaskpaneButton2">
-                  <Label resid="TaskpaneButton.Label"/>
+                  <Label resid="TaskpaneButton2.Label"/>
                   <Supertip>
-                    <Title resid="TaskpaneButton.Label"/>
+                    <Title resid="TaskpaneButton2.Label"/>
                     <Description resid="TaskpaneButton.Tooltip"/>
                   </Supertip>
                   <Icon>
@@ -69,7 +69,24 @@
                   <Action xsi:type="ShowTaskpane">
                     <TaskpaneId>ButtonId1</TaskpaneId>
                     <SourceLocation resid="Taskpane.Url"/>
-                    <Title resid="TaskpaneButton.Label"/>
+                    <Title resid="TaskpaneButton1.Label"/>
+                  </Action>
+                </Control>
+                <Control xsi:type="Button" id="CEIC-DPATaskpaneButton3">
+                  <Label resid="TaskpaneButton3.Label"/>
+                  <Supertip>
+                    <Title resid="TaskpaneButton3.Label"/>
+                    <Description resid="TaskpaneButton.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <SourceLocation resid="Taskpane.Url"/>
+                    <Title resid="TaskpaneButton3.Label"/>
                   </Action>
                 </Control>
               </Group>
@@ -94,8 +111,17 @@
         <bt:String id="Version.Description" DefaultValue="Sign agreements online with CEIC-DPA"/>
         <bt:String id="GetStarted.Title" DefaultValue="Get started with DPA inner-tools!"/>
         <bt:String id="CommandsGroup.Label" DefaultValue="CEIC-DPA"/>
-        <bt:String id="CustomTab.Label" DefaultValue="DPA inner-tools"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="DPA inner-tools"/>
+
+        <bt:String id="CustomTab.Label" DefaultValue="CEIC-DPA inner-tools"/>
+
+        <bt:String id="TaskpaneButton1.Label" DefaultValue="login to DPA"/>
+        <bt:String id="CustomTab1.Label" DefaultValue="login to DPA"/>
+
+        <bt:String id="TaskpaneButton2.Label" DefaultValue="edge atp/stp"/>
+        <bt:String id="CustomTab2.Label" DefaultValue="edge atp/stp"/>
+
+        <bt:String id="TaskpaneButton3.Label" DefaultValue="mapping upload/download"/>
+        <bt:String id="CustomTab3.Label" DefaultValue="mapping upload/download"/>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="GetStarted.Description" DefaultValue="DPA inner-tools loaded successfully. Go to the DPA inner-tools tab and click the 'DPA inner-tools' button to get started."/>
