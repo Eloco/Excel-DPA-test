@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
+  <Id>C203A0DB-BAA7-46F8-8661-BAFCE44C73EA</Id>
+  <Version>0.0.0.1</Version>
+  <ProviderName>Eloco</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="DPA inner-tools"/>
+  <Description DefaultValue="inner tools for CEIC DPA"/>
+  <IconUrl DefaultValue="https://localhost:3000/assets/icon.png"/>
+  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon.png"/>
+  <SupportUrl DefaultValue="https://learn.microsoft.com/en-us/javascript/api/manifest?view=powerpoint-js-preview"/>
+  <AppDomains>
+      <AppDomain>https://bpa.vpc.ceicdata.com</AppDomain>
+      <AppDomain>https://127.0.0.1</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="Workbook"/>
+    <!-- <Host Name="Document"/> -->
+    <!-- <Host Name="Presentation"/> -->
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://m.baidu.com/"/>
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Description resid="Version.Description" />
+    <Hosts>
+      <!-- <Host xsi:type="Document"> -->
+      <Host xsi:type="Workbook">
+        <DesktopFormFactor>
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <CustomTab id="CEIC-DPATab">
+              <Group id="CEIC-DPACommands">
+                <Label resid="CommandsGroup.Label"/>
+                <Icon>
+                  <bt:Image size="16" resid="Icon.16x16"/>
+                  <bt:Image size="32" resid="Icon.32x32"/>
+                  <bt:Image size="80" resid="Icon.80x80"/>
+                </Icon>
+                <Control xsi:type="Button" id="CEIC-DPATaskpaneButton">
+                  <Label resid="TaskpaneButton.Label"/>
+                  <Supertip>
+                    <Title resid="TaskpaneButton.Label"/>
+                    <Description resid="TaskpaneButton.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <SourceLocation resid="Taskpane.Url"/>
+                    <Title resid="TaskpaneButton.Label"/>
+                  </Action>
+                </Control>
+              </Group>
+              <Label resid="CustomTab.Label"/>
+            </CustomTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="Icon.16x16" DefaultValue="https://localhost:3000/assets/icon.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://localhost:3000/assets/icon.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/icon.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://learn.microsoft.com/en-us/javascript/api/manifest?view=powerpoint-js-preview"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://m.baidu.com/"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="Version.Description" DefaultValue="Sign agreements online with CEIC-DPA"/>
+        <bt:String id="GetStarted.Title" DefaultValue="Get started with DPA inner-tools!"/>
+        <bt:String id="CommandsGroup.Label" DefaultValue="CEIC-DPA"/>
+        <bt:String id="CustomTab.Label" DefaultValue="DPA inner-tools"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="DPA inner-tools"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="GetStarted.Description" DefaultValue="DPA inner-tools loaded successfully. Go to the DPA inner-tools tab and click the 'DPA inner-tools' button to get started."/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to show DPA inner-tools configuration"/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>
