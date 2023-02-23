@@ -29,6 +29,7 @@
       <Host xsi:type="Workbook">
         <DesktopFormFactor>
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <!-- <OfficeTab id="CEIC-DPATab"> -->
             <CustomTab id="CEIC-DPATab">
               <Group id="CEIC-DPACommands">
                 <Label resid="CommandsGroup.Label"/>
@@ -54,9 +55,27 @@
                     <Title resid="TaskpaneButton.Label"/>
                   </Action>
                 </Control>
+                <Control xsi:type="Button" id="CEIC-DPATaskpaneButton2">
+                  <Label resid="TaskpaneButton.Label"/>
+                  <Supertip>
+                    <Title resid="TaskpaneButton.Label"/>
+                    <Description resid="TaskpaneButton.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <SourceLocation resid="Taskpane.Url"/>
+                    <Title resid="TaskpaneButton.Label"/>
+                  </Action>
+                </Control>
               </Group>
               <Label resid="CustomTab.Label"/>
             </CustomTab>
+            <!-- </OfficeTab> -->
           </ExtensionPoint>
         </DesktopFormFactor>
       </Host>
