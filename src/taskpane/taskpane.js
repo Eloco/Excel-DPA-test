@@ -19,14 +19,16 @@ export async function writeData() {
     //     return context.sync()
     // });
     Excel.run(async (context) => {
-        const fileUrl = "http://127.0.0.1:8088/myfile.xlsx";
+        const fileUrl = "https://transfer.sh/get/yszaX2/Mapping_CN-BAR-NBSdb-IP-MTH.xlsx";
         const fileName = "myfile.xlsx";
         const workbook = await context.workbook;
         const sheets = workbook.worksheets;
         // 从 URL 下载文件
         const response = await fetch(fileUrl,{
                                      mode: 'cors',
-                                     headers: {'Access-Control-Allow-Origin': "*"},
+                                     headers: {'Access-Control-Allow-Origin': "*",
+                                                "Access-Control-Allow-Methods": "GET, POST, PUT",
+                                                "Access-Control-Allow-Headers": "Content-Type"},
                                     });
         const data = await response.arrayBuffer();
         // 创建一个 Base64 字符串以在 Excel 中加载文件

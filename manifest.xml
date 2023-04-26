@@ -10,8 +10,9 @@
   <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon.png"/>
   <SupportUrl DefaultValue="https://learn.microsoft.com/en-us/javascript/api/manifest?view=powerpoint-js-preview"/>
   <AppDomains>
-      <AppDomain>https://bpa.vpc.ceicdata.com</AppDomain>
-      <AppDomain>https://127.0.0.1</AppDomain>
+      <AppDomain>https://bpa.eloco.eu.org</AppDomain>
+      <AppDomain>https://transfer.sh</AppDomain>
+      <AppDomain>https://localhost:3000</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Workbook"/>
@@ -19,7 +20,7 @@
     <!-- <Host Name="Presentation"/> -->
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://m.baidu.com/"/>
+    <SourceLocation DefaultValue="https://bpa.eloco.eu.org"/>
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -105,7 +106,9 @@
       </bt:Images>
       <bt:Urls>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://learn.microsoft.com/en-us/javascript/api/manifest?view=powerpoint-js-preview"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://m.baidu.com/"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/commands.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
+        <bt:Url id="DPA.Url" DefaultValue="https://bpa.eloco.eu.org/"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="Version.Description" DefaultValue="Sign agreements online with CEIC-DPA"/>
@@ -115,13 +118,10 @@
         <bt:String id="CustomTab.Label" DefaultValue="CEIC-DPA inner-tools"/>
 
         <bt:String id="TaskpaneButton1.Label" DefaultValue="login to DPA"/>
-        <bt:String id="CustomTab1.Label" DefaultValue="login to DPA"/>
 
         <bt:String id="TaskpaneButton2.Label" DefaultValue="edge atp/stp"/>
-        <bt:String id="CustomTab2.Label" DefaultValue="edge atp/stp"/>
 
         <bt:String id="TaskpaneButton3.Label" DefaultValue="mapping upload/download"/>
-        <bt:String id="CustomTab3.Label" DefaultValue="mapping upload/download"/>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="GetStarted.Description" DefaultValue="DPA inner-tools loaded successfully. Go to the DPA inner-tools tab and click the 'DPA inner-tools' button to get started."/>
